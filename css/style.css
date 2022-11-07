@@ -14,6 +14,12 @@ body {
   color: #fff;
 }
 
+.button {
+  padding: 0px 40px;
+  border: 1px solid #FFFFFF;
+  line-height: 48px;
+}
+
 /* ===================== HEADER ===================== */
 .header {
   text-transform: uppercase;
@@ -32,4 +38,28 @@ body {
 .header__list {
   display: flex;
   gap: 40px;
+}
+/* ===================== MAIN ===================== */
+.main {
+  height: 1032px;
+  background: url("../img/main/background.jpg") 50% 50%/cover no-repeat;
+  text-align: center;
+}
+.main__content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main__title {
+  font-weight: 700;
+  font-size: 96px;
+  margin-bottom: 24px;
+}
+.main__subtitle {
+  font-size: 32px;
+  max-width: 760px;
+  margin-bottom: 48px;
 }

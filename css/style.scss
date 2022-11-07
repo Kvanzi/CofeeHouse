@@ -12,6 +12,11 @@ body {
 * {
     color: #fff;
 }
+.button {
+    padding: 0px 40px;
+    border: 1px solid #FFFFFF;
+    line-height: 48px;
+}
 /* ===================== HEADER ===================== */
 
 .header {
@@ -51,5 +56,50 @@ body {
     // .header__item
 
     &__item {
+    }
+}
+
+/* ===================== MAIN ===================== */
+
+.main {
+    height: 1032px;
+    background: url('../img/main/background.jpg') 50% 50%/cover no-repeat;
+    text-align: center;
+
+    // .main__content
+
+    &__content {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    // .main__img
+
+    &__img {
+    }
+
+    // .main__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 96px;
+        margin-bottom: 24px;
+    }
+
+    // .main__subtitle
+
+    &__subtitle {
+        font-size: 32px;
+        max-width: 760px;
+        margin-bottom: 48px;
+    }
+
+    // .main__button
+
+    &__button {
     }
 }
