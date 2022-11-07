@@ -17,6 +17,7 @@ body {
     border: 1px solid #fff;
     line-height: 48px;
     transition: .2s;
+    text-transform: uppercase;
 }
 /* ===================== HEADER ===================== */
 
@@ -121,6 +122,7 @@ body {
     &__content {
         padding: 144px 0px;
         display: flex;
+        gap: 20px;
         justify-content: space-between;
         align-items: center;
     }
@@ -176,5 +178,50 @@ body {
         max-width: 272px;
     }
 }
-.right {
+
+/* ===================== CTA ===================== */
+
+.cta {
+    background: url('../img/cta/background.jpg') 50% 50%/cover no-repeat;
+
+    // .cta__content
+
+    &__content {
+        padding: 96px 40px;
+        text-align: center;
+    }
+
+    // .cta__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 48px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            height: 1px;
+            width: 190px;
+            background-color: #fff;
+            transform: translateX(-50%);
+        }
+    }
+
+    // .cta__subtitle
+
+    &__subtitle {
+        margin: 0 auto 48px;
+        line-height: 24px;
+        max-width: 474px;
+    }
+
+    // .cta__button
+
+    &__button {
+        display: inline-block;
+    }
 }
