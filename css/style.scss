@@ -1,0 +1,55 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css?family=Inter:regular,700&display=swap');
+
+[class*="__container"] {
+    max-width: calc(1120px + 140px * 2);
+    margin: 0 auto;
+    padding: 0px 40px;
+}
+body {
+    font-family: 'Inter';
+}
+* {
+    color: #fff;
+}
+/* ===================== HEADER ===================== */
+
+.header {
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    // .header__content
+
+    &__content {
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    // .header__logo
+
+    &__logo {
+    }
+
+    // .header__nav
+
+    &__nav {
+    }
+
+    // .header__list
+
+    &__list {
+        display: flex;
+        gap: 40px;  
+    }
+
+    // .header__item
+
+    &__item {
+    }
+}

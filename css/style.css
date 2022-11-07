@@ -1,7 +1,35 @@
 @import "./reset.css";
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,700&display=swap");
+[class*=__container] {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 40px;
+}
 
-/* [class*="__container"] {
-    max-width: calc(px + 15px * 2);
-    margin: 0 auto;
-    padding: 0px 15px;
-} */
+body {
+  font-family: "Inter";
+}
+
+* {
+  color: #fff;
+}
+
+/* ===================== HEADER ===================== */
+.header {
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header__content {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.header__list {
+  display: flex;
+  gap: 40px;
+}
