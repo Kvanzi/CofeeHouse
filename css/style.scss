@@ -6,6 +6,19 @@
     margin: 0 auto;
     padding: 0px 40px;
 }
+[class*="__title"] {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -24px;
+        left: 50%;
+        height: 1px;
+        width: 190px;
+        background-color: #fff;
+        transform: translateX(-50%);
+    }
+}
 body {
     font-family: 'Inter';
 }
@@ -92,6 +105,10 @@ body {
         font-weight: 700;
         font-size: 96px;
         margin-bottom: 24px;
+
+        &::before {
+            display: none;
+        }
     }
 
     // .main__subtitle
@@ -198,18 +215,6 @@ body {
         font-weight: 700;
         font-size: 40px;
         margin-bottom: 48px;
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: -24px;
-            left: 50%;
-            height: 1px;
-            width: 190px;
-            background-color: #fff;
-            transform: translateX(-50%);
-        }
     }
 
     // .cta__subtitle
@@ -313,18 +318,10 @@ body {
         font-weight: 700;
         font-size: 40px;
         line-height: 48px;
-        position: relative;
         margin-bottom: 48px;
 
         &::before {
-            content: '';
-            position: absolute;
-            bottom: -24px;
-            left: 50%;
-            height: 1px;
-            width: 190px;
             background-color: #000;
-            transform: translateX(-50%);
         }
     }
 
@@ -417,19 +414,7 @@ body {
         font-weight: 700;
         font-size: 40px;
         line-height: 48px;
-        position: relative;
         margin-bottom: 72px;
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: -24px;
-            left: 50%;
-            height: 1px;
-            width: 190px;
-            background-color: #fff;
-            transform: translateX(-50%);
-        }
     }
 
     // .testimonials__review

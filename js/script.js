@@ -34,8 +34,7 @@ window.addEventListener('scroll', () => {
 const menuTabs = document.querySelectorAll('.menu__tab');
 const menuBodies = document.querySelectorAll('.menu__body');
 
-for (let i = 0; i < menuTabs.length; i++) {
-    menuTabs[0].click();
+for (let i = 0; i < menuTabs.length; i++) { 
     menuTabs[i].addEventListener('click', () => {
         menuTabs.forEach((e) => { e.classList.remove('active') });
         menuBodies.forEach((e) => { e.classList.remove('active') });
