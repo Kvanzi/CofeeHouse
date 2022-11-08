@@ -69,6 +69,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0px 40px;
 }
 .main__img {
   margin-bottom: 24px;
@@ -117,6 +118,9 @@ body {
 .sidebar__title {
   text-transform: uppercase;
   margin-bottom: 5px;
+}
+.sidebar__title::before {
+  display: none;
 }
 .sidebar__subtitle {
   font-size: 12px;
@@ -187,6 +191,9 @@ body {
 .menu__content .body__desc * {
   text-align: left;
 }
+.menu__content .body__title::before {
+  display: none;
+}
 .menu__content .body__subtitle {
   font-size: 12px;
 }
@@ -224,12 +231,13 @@ body {
   border-bottom: 1px solid rgb(145, 145, 145);
 }
 .menu__body {
+  padding: 0px 40px;
   position: absolute;
   top: 360px;
   width: 100%;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, minmax(250px, 544px));
+  grid-template-columns: repeat(2, minmax(250px, 624px));
   grid-template-rows: repeat(5, 72px);
   grid-auto-flow: column;
   grid-column-gap: 30px;
@@ -237,7 +245,7 @@ body {
 }
 @media (max-width: 1024px) {
   .menu__body {
-    grid-template-columns: repeat(1, minmax(250px, 544px));
+    grid-template-columns: repeat(1, minmax(250px, 624px));
     grid-template-rows: repeat(10, 72px);
   }
 }
@@ -263,6 +271,9 @@ body {
 .testimonials__content {
   text-align: center;
   position: relative;
+}
+.testimonials__wrapper {
+  padding: 0px 40px;
 }
 .testimonials__title {
   font-weight: 700;
@@ -305,4 +316,67 @@ body {
 .swiper-pagination-bullet-active {
   background-color: #D9D9D9 !important;
   border-color: #D9D9D9 !important;
+}
+
+/* ===================== POSTS ===================== */
+.posts {
+  background-color: #EEEEEE;
+}
+.posts * {
+  color: #111111;
+}
+.posts__content {
+  text-align: center;
+  padding: 96px 0px;
+}
+.posts__title {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 48px;
+}
+.posts__title::before {
+  background-color: #444444;
+}
+.posts__subtitle {
+  line-height: 24px;
+  color: #111111;
+  max-width: 474px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+.posts__cards {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  gap: 24px;
+}
+.posts .cards__img {
+  margin-bottom: 24px;
+}
+.posts .cards__title {
+  max-width: 352px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.posts .cards__title::before {
+  display: none;
+}
+.posts .cards__subtitle {
+  line-height: 24px;
+  max-width: 352px;
+  margin-bottom: 24px;
+}
+.posts .cards__btn {
+  position: relative;
+  padding-left: 20px;
+  font-size: 12px;
+}
+.posts .cards__btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 1px;
+  background-color: #000;
 }
