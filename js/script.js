@@ -1,7 +1,6 @@
 new Swiper('.swiper__content', {
     loop: true,
     speed: 550,
-    cssMode: true,
 
     autoplay: {
         delay: 5000,
