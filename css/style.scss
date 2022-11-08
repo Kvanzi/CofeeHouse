@@ -27,6 +27,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
 
     // .header__content
 
@@ -223,5 +224,177 @@ body {
 
     &__button {
         display: inline-block;
+    }
+}
+
+/* ===================== MENU ===================== */
+
+.menu {
+    position: relative;
+    overflow: hidden;
+    background-color: #EEEEEE;
+
+    & * {
+        color: #000;
+    }
+
+    // .menu__container
+
+    &__container {
+    }
+
+    // .menu__content
+
+    &__content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 96px 0 552px 0;
+
+        @media (max-width: 1024px) {
+            padding: 96px 0 1002px 0;
+        }
+
+
+        .body {
+            background-color: red;
+
+            // .body__item
+        
+            &__item {
+                display: flex;
+                gap: 24px;
+                text-align: left;
+            }
+        
+            // .body__img
+        
+            &__img {
+                min-width: 72px;
+                min-height: 72px;
+            }
+
+            // .body__text
+
+            &__text {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+        
+            // .body__desc
+        
+            &__desc * {
+                text-align: left;
+            }
+        
+            // .body__title
+        
+            &__title {
+            }
+        
+            // .body__subtitle
+        
+            &__subtitle {
+                font-size: 12px;
+            }
+        
+            // .body__price
+        
+            &__price {
+            }
+        }
+    }
+
+    // .menu__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        position: relative;
+        margin-bottom: 48px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            height: 1px;
+            width: 190px;
+            background-color: #000;
+            transform: translateX(-50%);
+        }
+    }
+
+    // .menu__subtitle
+
+    &__subtitle {
+        line-height: 24px;
+        max-width: 474px;
+        margin-bottom: 48px;
+    }
+
+    // .menu__tabs
+
+    &__tabs {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 48px;
+    }
+
+    // .menu__tab
+
+    &__tab {
+        appearance: none;
+
+        &:checked + label {
+            border-bottom: 1px solid #000;
+        }
+        & + label {
+            text-transform: uppercase;
+
+            &:hover {
+                border-bottom: 1px solid rgb(145, 145, 145);
+            }
+        }
+    }
+
+    // .menu__body
+
+    &__body {
+        position: absolute;
+        top: 360px;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, minmax(250px, 544px));
+        grid-template-rows: repeat(5, 72px);
+        grid-auto-flow: column;
+        grid-column-gap: 30px;
+        grid-row-gap: 24px;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(1, minmax(250px, 544px));
+            grid-template-rows: repeat(10, 72px);
+        }
+    }
+
+    .food {
+        right: 0;
+        transition: right .2s;
+
+        &.active {
+            right: -100%;
+        }
+    }
+    .drinks {
+        left: 0;
+        transition: left .2s;
+
+        &.active {
+            left: -100%;
+        }
     }
 }

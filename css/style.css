@@ -29,6 +29,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 10;
 }
 .header__content {
   padding: 40px;
@@ -137,4 +138,122 @@ body {
 }
 .cta__button {
   display: inline-block;
+}
+
+/* ===================== MENU ===================== */
+.menu {
+  position: relative;
+  overflow: hidden;
+  background-color: #EEEEEE;
+}
+.menu * {
+  color: #000;
+}
+.menu__content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 96px 0 552px 0;
+}
+@media (max-width: 1024px) {
+  .menu__content {
+    padding: 96px 0 1002px 0;
+  }
+}
+.menu__content .body {
+  background-color: red;
+}
+.menu__content .body__item {
+  display: flex;
+  gap: 24px;
+  text-align: left;
+}
+.menu__content .body__img {
+  min-width: 72px;
+  min-height: 72px;
+}
+.menu__content .body__text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.menu__content .body__desc * {
+  text-align: left;
+}
+.menu__content .body__subtitle {
+  font-size: 12px;
+}
+.menu__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  position: relative;
+  margin-bottom: 48px;
+}
+.menu__title::before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  height: 1px;
+  width: 190px;
+  background-color: #000;
+  transform: translateX(-50%);
+}
+.menu__subtitle {
+  line-height: 24px;
+  max-width: 474px;
+  margin-bottom: 48px;
+}
+.menu__tabs {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.menu__tab {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.menu__tab:checked + label {
+  border-bottom: 1px solid #000;
+}
+.menu__tab + label {
+  text-transform: uppercase;
+}
+.menu__tab + label:hover {
+  border-bottom: 1px solid rgb(145, 145, 145);
+}
+.menu__body {
+  position: absolute;
+  top: 360px;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, minmax(250px, 544px));
+  grid-template-rows: repeat(5, 72px);
+  grid-auto-flow: column;
+  grid-column-gap: 30px;
+  grid-row-gap: 24px;
+}
+@media (max-width: 1024px) {
+  .menu__body {
+    grid-template-columns: repeat(1, minmax(250px, 544px));
+    grid-template-rows: repeat(10, 72px);
+  }
+}
+.menu .food {
+  right: 0;
+  transition: right 0.2s;
+}
+.menu .food.active {
+  right: -100%;
+}
+.menu .drinks {
+  left: 0;
+  transition: left 0.2s;
+}
+.menu .drinks.active {
+  left: -100%;
 }
