@@ -1,3 +1,19 @@
+new Swiper('.swiper__content', {
+    loop: true,
+    speed: 550,
+    cssMode: true,
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
 const defaultOffset = 50;
 const header = document.querySelector('.header');
 

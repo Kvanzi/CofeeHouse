@@ -257,3 +257,65 @@ body {
 .menu .drinks.active {
   left: -100%;
 }
+
+/* ===================== TESTIMONALS ===================== */
+.testimonials {
+  overflow: hidden;
+}
+.testimonials__content {
+  text-align: center;
+  position: relative;
+}
+.testimonials__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  position: relative;
+  margin-bottom: 72px;
+}
+.testimonials__title::before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  height: 1px;
+  width: 190px;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+.testimonials__review {
+  max-width: 735px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.testimonials__info {
+  margin-bottom: 48px;
+}
+
+.swiper__slide {
+  background: url("../img/testimonials/background.jpg") 50% 50%/cover no-repeat;
+  height: 504px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.swiper-pagination {
+  display: inline-block !important;
+  bottom: 96px !important;
+}
+.swiper-pagination-bullet {
+  width: 11px !important;
+  height: 11px !important;
+  border: 1px solid #FFFFFF;
+  background-color: transparent !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #D9D9D9 !important;
+  border-color: #D9D9D9 !important;
+}
