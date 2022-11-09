@@ -422,3 +422,44 @@ body {
 .locations__card .card__info * {
   line-height: 24px;
 }
+/* ===================== NEWSLETTER ===================== */
+.newsletter {
+  background-color: #111111;
+}
+.newsletter__content {
+  text-align: center;
+  padding: 96px 0;
+}
+.newsletter__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 48px;
+}
+.newsletter__subtitle {
+  max-width: 474px;
+  line-height: 24px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+.newsletter__form {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.newsletter__input {
+  border: 1px solid #FFFFFF;
+  line-height: 48px;
+  max-width: 277px;
+  width: 100%;
+  padding: 0 24px;
+}
+.newsletter__input::-moz-placeholder {
+  color: #fff;
+}
+.newsletter__input:-ms-input-placeholder {
+  color: #fff;
+}
+.newsletter__input::placeholder {
+  color: #fff;
+}

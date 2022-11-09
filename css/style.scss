@@ -686,3 +686,66 @@ body {
         }
     }
 }
+
+/* ===================== NEWSLETTER ===================== */
+
+.newsletter {
+    background-color: #111111;
+
+    // .newsletter__container
+
+    &__container {
+    }
+
+    // .newsletter__content
+
+    &__content {
+        text-align: center;
+        padding: 96px 0;
+    }
+
+    // .newsletter__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 48px;
+    }
+
+    // .newsletter__subtitle
+
+    &__subtitle {
+        max-width: 474px;
+        line-height: 24px;
+        margin: 0 auto;
+        margin-bottom: 48px;
+    }
+
+    // .newsletter__form
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    // .newsletter__input
+
+    &__input {
+        border: 1px solid #FFFFFF;
+        line-height: 48px;
+        max-width: 277px;
+        width: 100%;
+        padding: 0 24px;
+        
+        &::placeholder {
+            color: #fff;
+        }
+    }
+
+    // .newsletter__btn
+
+    &__btn {
+    }
+}
