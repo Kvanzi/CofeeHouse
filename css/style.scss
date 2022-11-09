@@ -391,7 +391,7 @@ body {
 
     .food {
         right: 0;
-        transition: right .2s;
+        transition: right .35s;
 
         &.active {
             right: -100%;
@@ -399,7 +399,7 @@ body {
     }
     .drinks {
         left: 0;
-        transition: left .2s;
+        transition: left .35s;
 
         &.active {
             left: -100%;
@@ -477,6 +477,7 @@ body {
     &-pagination {
         display: inline-block!important;
         bottom: 96px!important;
+        z-index: 5!important;
 
         &-bullet {
             width: 11px!important;
@@ -593,6 +594,94 @@ body {
                 width: 12px;
                 height: 1px;
                 background-color: #000;
+            }
+        }
+    }
+}
+
+/* ===================== LOCATIONS ===================== */
+
+.locations {
+    background: url('../img/locations/background.jpg') 50% 50%/cover no-repeat;
+
+    // .locations__container
+
+    &__container {
+    }
+
+    // .locations__content
+
+    &__content {
+        padding: 96px 40px;
+        text-align: center;
+    }
+
+    // .locations__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 48px;
+    }
+
+    // .locations__subtitle
+
+    &__subtitle {
+        line-height: 24px;
+        margin-bottom: 48px;
+    }
+
+    // .locations__cards
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    // .locations__card
+
+    &__card {
+        max-width: 256px;
+
+        .card {
+
+            // .card__img
+        
+            &__img {
+                margin-bottom: 24px;
+                padding: 0 5.5px;
+            }
+        
+            // .card__title
+        
+            &__title {
+                font-size: 24px;
+                line-height: 48px;
+                margin-bottom: 24px;
+
+                &::before {
+                    display: none;
+                }
+            }
+        
+            // .card__info
+        
+            &__info {
+
+                * {
+                    line-height: 24px;
+                }
+            }
+        
+            // .card__days
+        
+            &__days {
+            }
+        
+            // .card__street
+        
+            &__street {
             }
         }
     }

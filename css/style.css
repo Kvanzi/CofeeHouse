@@ -251,14 +251,14 @@ body {
 }
 .menu .food {
   right: 0;
-  transition: right 0.2s;
+  transition: right 0.35s;
 }
 .menu .food.active {
   right: -100%;
 }
 .menu .drinks {
   left: 0;
-  transition: left 0.2s;
+  transition: left 0.35s;
 }
 .menu .drinks.active {
   left: -100%;
@@ -305,6 +305,7 @@ body {
 .swiper-pagination {
   display: inline-block !important;
   bottom: 96px !important;
+  z-index: 5 !important;
 }
 .swiper-pagination-bullet {
   width: 11px !important;
@@ -379,4 +380,45 @@ body {
   width: 12px;
   height: 1px;
   background-color: #000;
+}
+
+/* ===================== LOCATIONS ===================== */
+.locations {
+  background: url("../img/locations/background.jpg") 50% 50%/cover no-repeat;
+}
+.locations__content {
+  padding: 96px 40px;
+  text-align: center;
+}
+.locations__title {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 48px;
+}
+.locations__subtitle {
+  line-height: 24px;
+  margin-bottom: 48px;
+}
+.locations__cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.locations__card {
+  max-width: 256px;
+}
+.locations__card .card__img {
+  margin-bottom: 24px;
+  padding: 0 5.5px;
+}
+.locations__card .card__title {
+  font-size: 24px;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+.locations__card .card__title::before {
+  display: none;
+}
+.locations__card .card__info * {
+  line-height: 24px;
 }
