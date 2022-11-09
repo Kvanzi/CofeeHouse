@@ -749,3 +749,67 @@ body {
     &__btn {
     }
 }
+
+/* ===================== FOOTER ===================== */
+
+.footer {
+    background-color: #111111;
+
+    // .footer__container
+
+    &__container {
+        padding: 48px 0px;
+    }
+
+    // .footer__content
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .footer__copyright
+
+    &__copyright {
+        font-size: 12px;
+    }
+
+    // .footer__nav
+
+    &__nav {
+    }
+
+    // .footer__list
+
+    &__list {
+        display: flex;
+        gap: 48px;
+    }
+
+    // .footer__item
+
+    &__item {
+        line-height: 24px;
+    }
+
+    // .footer__socials
+
+    &__socials {
+        display: flex;
+        gap: 26px;
+    }
+
+    // .footer__link
+
+    &__link {
+        font-size: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(217, 217, 217, 0.1);
+        min-height: 24px;
+        min-width: 24px;
+        border-radius: 50%;
+    }
+}
