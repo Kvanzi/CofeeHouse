@@ -53,7 +53,7 @@ for (let i = 0; i < menuTabs.length; i++) {
 const menuBtn = document.querySelector('.header__menu__btn');
 const body = document.body;
 
-menuBtn.addEventListener('click', () => {
+function toggleHeaderMenu() {
     menuBtn.classList.toggle('active');
     headerList.classList.toggle('active');
     body.classList.toggle('lock');
@@ -65,4 +65,16 @@ menuBtn.addEventListener('click', () => {
         header.style.backgroundColor = '#262626d9';
         document.querySelector('.header__content').style.padding = '20px 40px';
     }
+}
+
+menuBtn.addEventListener('click', () => {
+    toggleHeaderMenu();
 });
+
+const headerMenuLinks = document.querySelectorAll('.header__item');
+
+for (const link of headerMenuLinks) {
+    link.addEventListener('click', () => {
+        toggleHeaderMenu();
+    })
+}
