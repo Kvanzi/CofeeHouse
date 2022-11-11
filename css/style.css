@@ -23,9 +23,16 @@
 body {
   font-family: "Inter";
 }
+body.lock {
+  overflow: hidden;
+}
 
 * {
   color: #fff;
+}
+
+.hidden {
+  display: none;
 }
 
 .button {
@@ -34,6 +41,10 @@ body {
   line-height: 48px;
   transition: 0.2s;
   text-transform: uppercase;
+}
+.button:hover {
+  background-color: #fff;
+  color: #111111;
 }
 
 /* ===================== HEADER ===================== */
@@ -53,10 +64,96 @@ body {
   gap: 40px;
   transition: padding 0.2s;
 }
+.header__logo {
+  color: #EEEEEE;
+}
 .header__list {
   display: flex;
   gap: 40px;
 }
+.header__item a {
+  position: relative;
+}
+.header__item a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: right 0.2s;
+}
+.header__item a:hover::before {
+  right: 0;
+}
+.header__menu__btn {
+  width: 19px;
+  height: 13px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+.header__menu__btn::before, .header__menu__btn::after, .header__menu__btn span {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.2s;
+}
+.header__menu__btn::before {
+  top: 0;
+}
+.header__menu__btn::after {
+  bottom: 0;
+}
+.header__menu__btn span {
+  top: 50%;
+}
+.header__menu__btn.active span {
+  transform: scale(0);
+}
+.header__menu__btn.active::before, .header__menu__btn.active::after {
+  top: 50%;
+}
+.header__menu__btn.active::before {
+  transform: rotate(-45deg);
+}
+.header__menu__btn.active::after {
+  transform: rotate(45deg);
+}
+@media (max-width: 1050px) {
+  .header__list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    background-color: rgba(17, 17, 17, 0.95);
+    flex-direction: column;
+    gap: 48px;
+    overflow: auto;
+    overflow-x: hidden;
+    transition: left 0.2s;
+  }
+  .header__list.active {
+    left: 0;
+  }
+  .header__item {
+    font-size: 24px;
+    line-height: 48px;
+    transform: translateX(clamp(3.75rem, -0.956rem + 23.53vw, 7.5rem));
+  }
+  .header__logo {
+    z-index: 1;
+  }
+  .header__menu__btn {
+    display: block;
+  }
+}
+
 /* ===================== MAIN ===================== */
 .main {
   height: 1032px;
@@ -86,6 +183,8 @@ body {
   font-size: 32px;
   max-width: 760px;
   margin-bottom: 48px;
+  margin: 0 auto;
+  font-weight: 400;
 }
 /* ===================== FEATURES ===================== */
 .features {

@@ -21,9 +21,16 @@
 }
 body {
     font-family: 'Inter';
+
+    &.lock {
+        overflow: hidden;
+    }
 }
 * {
     color: #fff;
+}
+.hidden {
+    display: none;
 }
 .button {
     padding: 0px 40px;
@@ -31,6 +38,11 @@ body {
     line-height: 48px;
     transition: .2s;
     text-transform: uppercase;
+
+    &:hover {
+        background-color: #fff;
+        color: #111111;
+    }
 }
 /* ===================== HEADER ===================== */
 
@@ -56,6 +68,7 @@ body {
     // .header__logo
 
     &__logo {
+        color: #EEEEEE;
     }
 
     // .header__nav
@@ -72,7 +85,98 @@ body {
 
     // .header__item
 
-    &__item {
+    &__item a{
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 100%;
+            height: 2px;
+            background-color: #fff;
+            transition: right .2s;
+        }
+        &:hover::before {
+            right: 0;
+        }
+    }
+
+    &__menu__btn {
+        width: 19px;
+        height: 13px;
+        position: relative;
+        cursor: pointer;
+        display: none;
+
+        &::before,
+        &::after,
+        & span  {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            transition: .2s;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        & span {
+            top: 50%;
+        }
+
+        &.active {
+            & span {
+                transform: scale(0);
+            }
+            &::before,
+            &::after {
+                top: 50%;
+            }
+            &::before {
+                transform: rotate(-45deg)
+            }
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    @media (max-width: 1050px) {
+        &__list {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            height: 100vh;
+            width: 100vw;
+            justify-content: center;
+            background-color: rgba(17, 17, 17, 0.95);
+            flex-direction: column;
+            gap: 48px;
+            overflow: auto;
+            overflow-x: hidden;
+            transition: left .2s;
+
+            &.active {
+                left: 0;
+            }
+        }
+        &__item {
+            font-size: 24px;
+            line-height: 48px;
+            transform: translateX(clamp(3.75rem, -0.956rem + 23.53vw, 7.5rem));
+        }
+        &__logo {
+            z-index: 1;
+        }
+        &__menu__btn {
+            display: block;
+        }
     }
 }
 
@@ -118,6 +222,8 @@ body {
         font-size: 32px;
         max-width: 760px;
         margin-bottom: 48px;
+        margin: 0 auto;
+        font-weight: 400;
     }
 
     // .main__button
