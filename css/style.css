@@ -214,6 +214,17 @@ body.lock {
   flex-direction: column;
   gap: 48px;
 }
+@media (max-width: 768px) {
+  .features {
+    background-position: 10% 50%;
+  }
+  .features__content {
+    padding: 96px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+  }
+}
 
 .sidebar__item {
   display: flex;
@@ -222,6 +233,15 @@ body.lock {
 .sidebar__item.reverse {
   text-align: right;
   flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+  .sidebar__item.reverse {
+    text-align: left;
+    flex-direction: row;
+  }
+}
+.sidebar__img {
+  min-width: 54px;
 }
 .sidebar__desc * {
   color: #000;
