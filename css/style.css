@@ -183,9 +183,21 @@ body.lock {
   font-size: 32px;
   max-width: 760px;
   margin-bottom: 48px;
-  margin: 0 auto;
-  font-weight: 400;
 }
+@media (max-width: 768px) {
+  .main__title {
+    font-size: 40px;
+    line-height: 96px;
+    font-size: 24px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 575px) {
+  .main__subtitle {
+    font-size: 24px;
+  }
+}
+
 /* ===================== FEATURES ===================== */
 .features {
   background: url("../img/features/background.jpg") 50% 0/auto 100% no-repeat;

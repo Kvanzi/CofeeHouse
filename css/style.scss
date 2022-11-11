@@ -222,13 +222,25 @@ body {
         font-size: 32px;
         max-width: 760px;
         margin-bottom: 48px;
-        margin: 0 auto;
-        font-weight: 400;
     }
 
     // .main__button
 
     &__button {
+    }
+
+    @media (max-width: 768px) {
+        &__title {
+            font-size: 40px;
+            line-height: 96px;
+            font-size: 24px;
+            line-height: 48px;
+        }
+    }
+    @media (max-width: 575px) {
+        &__subtitle {
+            font-size: 24px;
+        }
     }
 }
 
