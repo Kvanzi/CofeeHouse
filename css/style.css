@@ -302,6 +302,11 @@ body.lock {
     padding: 96px 0 1002px 0;
   }
 }
+@media (max-width: 425px) {
+  .menu__content {
+    padding: 96px 0 1250px 0;
+  }
+}
 .menu__content .body {
   background-color: red;
 }
@@ -327,6 +332,14 @@ body.lock {
 }
 .menu__content .body__subtitle {
   font-size: 12px;
+}
+@media (max-width: 425px) {
+  .menu__content .body__title {
+    font-size: 15px;
+  }
+  .menu__content .body__subtitle {
+    font-size: 11px;
+  }
 }
 .menu__title {
   font-weight: 700;
@@ -378,6 +391,17 @@ body.lock {
   .menu__body {
     grid-template-columns: repeat(1, minmax(250px, 624px));
     grid-template-rows: repeat(10, 72px);
+  }
+}
+@media (max-width: 425px) {
+  .menu__body {
+    top: 420px;
+    grid-row-gap: 50px;
+  }
+}
+@media (max-width: 340px) {
+  .menu__body {
+    top: 450px;
   }
 }
 .menu .food {
