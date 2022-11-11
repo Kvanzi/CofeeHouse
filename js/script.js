@@ -73,10 +73,10 @@ menuBtn.addEventListener('click', () => {
 
 const headerMenuLinks = document.querySelectorAll('.header__item');
 
-if (headerList.classList.contains('active')) {
-    for (const link of headerMenuLinks) {
-        link.addEventListener('click', () => {
+for (const link of headerMenuLinks) {
+    link.addEventListener('click', () => {
+        if (headerList.classList.contains('active')) {
             toggleHeaderMenu();
-        })
-    }
-};
+        };
+    });
+}

@@ -35,10 +35,6 @@ body.lock {
   color: #fff;
 }
 
-.hidden {
-  display: none;
-}
-
 .button {
   padding: 0px 40px;
   border: 1px solid #fff;
