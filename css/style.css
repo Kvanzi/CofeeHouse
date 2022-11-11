@@ -618,6 +618,12 @@ body.lock {
   justify-content: center;
   gap: 24px;
 }
+@media (max-width: 575px) {
+  .newsletter__form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .newsletter__input {
   border: 1px solid #FFFFFF;
   line-height: 48px;
