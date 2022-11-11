@@ -19,6 +19,9 @@
         transform: translateX(-50%);
     }
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Inter';
 
@@ -28,9 +31,6 @@ body {
 }
 * {
     color: #fff;
-}
-.hidden {
-    display: none;
 }
 .button {
     padding: 0px 40px;

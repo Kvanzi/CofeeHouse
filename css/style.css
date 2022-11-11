@@ -20,6 +20,10 @@
   transform: translateX(-50%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter";
 }

@@ -73,8 +73,10 @@ menuBtn.addEventListener('click', () => {
 
 const headerMenuLinks = document.querySelectorAll('.header__item');
 
-for (const link of headerMenuLinks) {
-    link.addEventListener('click', () => {
-        toggleHeaderMenu();
-    })
-}
+if (headerList.classList.contains('active')) {
+    for (const link of headerMenuLinks) {
+        link.addEventListener('click', () => {
+            toggleHeaderMenu();
+        })
+    }
+};
