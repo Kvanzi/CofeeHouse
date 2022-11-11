@@ -651,9 +651,15 @@ body.lock {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 40px;
 }
 .footer__copyright {
   font-size: 12px;
+}
+@media (max-width: 768px) {
+  .footer__nav {
+    display: none;
+  }
 }
 .footer__list {
   display: flex;
@@ -661,6 +667,10 @@ body.lock {
 }
 .footer__item {
   line-height: 24px;
+  transition: letter-spacing 0.2s;
+}
+.footer__item:hover {
+  letter-spacing: 4px;
 }
 .footer__socials {
   display: flex;

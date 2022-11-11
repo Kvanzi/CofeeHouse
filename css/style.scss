@@ -939,6 +939,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 40px;
     }
 
     // .footer__copyright
@@ -950,6 +951,10 @@ body {
     // .footer__nav
 
     &__nav {
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     // .footer__list
@@ -963,6 +968,11 @@ body {
 
     &__item {
         line-height: 24px;
+        transition: letter-spacing .2s;
+
+        &:hover {
+            letter-spacing: 4px;
+        }
     }
 
     // .footer__socials
