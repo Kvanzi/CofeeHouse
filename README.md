@@ -7,7 +7,7 @@ Fully responsive portfolio website with animations and swiper slider. Used: HTML
 
 ## Demo
 
-![Kvanzi-portfloio](./website-previews/preview.jpg "Desktop Demo")
+![Kvanzi-portfloio](./website-demo/preview.jpg "Desktop Demo")
 
 ## Contact
 
